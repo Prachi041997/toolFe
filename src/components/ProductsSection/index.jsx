@@ -3,7 +3,6 @@ import React, { memo } from 'react';
 import SelectionBox from '../SelectionBox/index.jsx';
 
 const ProductsSections = ({productsCount, selectedOptions, removeHandler }) => {
-   console.log('ProductsSections rendered')
    return (
       <>
         <div className="grid grid-cols-2 lg:gap-7 gap-5">
