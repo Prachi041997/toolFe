@@ -11,3 +11,17 @@ html,body,#root{
   width: 100%;
   height: 100%;
 }
+.loader {
+  margin: 0 auto;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #a7b9d6;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

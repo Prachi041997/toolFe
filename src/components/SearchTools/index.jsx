@@ -3,6 +3,8 @@ import React, {
   useContext,
 } from 'react';
 
+import { MdSearch } from 'react-icons/md';
+
 import { StepsContext } from '../../Context/StepsContext.jsx';
 import Options from '../ProductOptions/index.jsx';
 
@@ -21,7 +23,7 @@ const SearchTools = ({handleSearch, filterText, setFilterText, filteredOptions, 
           <p className="font-light text-md">Search to quickly add products your team uses today. You'll be able to add as many as you need later bit for now let's add four.</p>
           <div className="relative">
             <div className="py-2 px-3 gap-2 rounded-md mt-5 flex items-center bg-slate-200">
-              {/* <MdSearch/> */}
+              <MdSearch/>
               <input type="text" value={filterText}onChange={(e) => onChangeHandle(e)} placeholder="Search for any software..." className="bg-transparent outline-none " />
             </div>
             <div className={`${filteredOptions.length == 0 && "hidden" } absolute w-full flex flex-col gap-1 bg-white translate-y-3 p-2 rounded-md border-slate-100 border-2 shadow-[0_0px_10px_1px_rgba(0,0,0,0.04)]`}>

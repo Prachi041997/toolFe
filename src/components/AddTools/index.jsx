@@ -72,7 +72,9 @@ function AddTools({ maxProductsCount }) {
                 </div>
                 <div className="sm:mt-0 mt-5 sm:w-1/2 max-w-96 sm:h-full sm:flex sm:flex-col sm:justify-center h-1/2 px-2">
                     <SearchTools totalSteps={3} handleSearch={betterSearch} filterText={filterText} setFilterText={setFilterText} filteredOptions={filteredOptions} handleOptionClick={handleOptionClick} />
-                    <button disabled={loader} onClick={saveConfig} className={`${selectedOptions.length > 0 ? "bg-blue-500 pointer-events-auto" : "bg-[#a7b9d6] pointer-events-none" } w-full p-2 mt-5 rounded-md text-white `}>Next</button>
+                    <button onClick={saveConfig} className={`${selectedOptions.length > 0 ? "bg-blue-500 pointer-events-auto" : "bg-[#a7b9d6] pointer-events-none" } w-full p-2 mt-5 rounded-md text-white `}>
+                        {loader ? <div className="loader" ></div>: 'Next'}
+                    </button>
                 </div>
             </div>
         </>
