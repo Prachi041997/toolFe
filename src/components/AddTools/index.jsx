@@ -14,8 +14,8 @@ import {
 import { StepsContext } from '../../Context/StepsContext.jsx';
 import { useTools } from '../../hooks/useTools.js';
 import { debounce } from '../../utils/toolOptions.js';
-import ProductsSections from '../ProductsSection/index.jsx';
 import SearchTools from '../SearchTools/index.jsx';
+import ToolsSection from '../ToolsSection/index.jsx';
 
 function AddTools({ maxProductsCount }) {
     const [selectedOptions, setSelectedOptions] = useState([]);
@@ -35,10 +35,9 @@ function AddTools({ maxProductsCount }) {
             position: "top-right",
             autoClose: 3000,
         });
-        
-
          return
        } 
+       if(response.data.message === 'added successfully')
        setCurrentStep((prev => prev + 1))
          
     }
@@ -68,7 +67,7 @@ function AddTools({ maxProductsCount }) {
             <ToastContainer />
             <div className="mt-5 sm:mt-0 flex sm:flex-row sm:gap-5 flex-col w-full h-full items-center">
                 <div className="sm:w-1/2 sm:h-full h-1/2 flex-col flex justify-center items-center">
-                    <ProductsSections productsCount={maxProductsCount} removeHandler={handleOptionRemove} selectedOptions={selectedOptions} />
+                    <ToolsSection productsCount={maxProductsCount} removeHandler={handleOptionRemove} selectedOptions={selectedOptions} />
                 </div>
                 <div className="sm:mt-0 mt-5 sm:w-1/2 max-w-96 sm:h-full sm:flex sm:flex-col sm:justify-center h-1/2 px-2">
                     <SearchTools totalSteps={3} handleSearch={betterSearch} filterText={filterText} setFilterText={setFilterText} filteredOptions={filteredOptions} handleOptionClick={handleOptionClick} />

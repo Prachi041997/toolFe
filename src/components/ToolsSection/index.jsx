@@ -2,7 +2,7 @@ import React, { memo } from 'react';
 
 import SelectionBox from '../SelectionBox/index.jsx';
 
-const ProductsSections = ({productsCount, selectedOptions, removeHandler }) => {
+const ToolsSection = ({productsCount, selectedOptions, removeHandler }) => {
    return (
       <>
         <div className="grid grid-cols-2 lg:gap-7 gap-5">
@@ -21,4 +21,4 @@ const ProductsSections = ({productsCount, selectedOptions, removeHandler }) => {
    )
 }
 
-export default memo(ProductsSections)
+export default memo(ToolsSection)

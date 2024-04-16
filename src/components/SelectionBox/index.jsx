@@ -1,5 +1,7 @@
-import { MdOutlineAdd ,MdClose } from "react-icons/md";
-
+import {
+  MdClose,
+  MdOutlineAdd,
+} from 'react-icons/md';
 
 const SelectionBox = (props) => {
     const {option,removeHandler} = props
@@ -14,7 +16,7 @@ const SelectionBox = (props) => {
                 </div>
                 <p className="mt-1 sm:mt-2 text-sm font-semibold">{option.option}</p>
                 </div>
-                <div  onClick={()=>removeHandler(option)} className="flex gap-1">
+                <div  onClick={()=>removeHandler(option)} className="flex gap-1 cursor-pointer">
                 <MdClose className="text-rose-500 font-semibold"/>
                 <p className="text-xs text-slate-400 font-medium">Remove</p>
                 </div>

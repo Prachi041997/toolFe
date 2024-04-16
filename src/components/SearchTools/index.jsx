@@ -6,7 +6,7 @@ import React, {
 import { MdSearch } from 'react-icons/md';
 
 import { StepsContext } from '../../Context/StepsContext.jsx';
-import Options from '../ProductOptions/index.jsx';
+import Options from '../ToolOptions/index.jsx';
 
 const SearchTools = ({handleSearch, filterText, setFilterText, filteredOptions, handleOptionClick }) => {
    const {currentStep, steps} = useContext(StepsContext)
